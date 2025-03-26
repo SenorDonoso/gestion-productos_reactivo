@@ -4,6 +4,29 @@
 # Log file
 *.log
 
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+**/target/
+
+# Logs
+*.log
+# IntelliJ IDEA
+.idea/
+*.iml
+# Eclipse
+.project
+.classpath
+.c9/
+.settings/
+# VS Code
+.vscode/
+# OS
+.DS_Store
+Thumbs.db
+# Lombok
+lombok.config
+
 # BlueJ files
 *.ctxt
 
