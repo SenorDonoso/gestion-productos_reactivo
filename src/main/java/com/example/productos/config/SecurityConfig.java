@@ -12,8 +12,8 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 @Configuration
 public class SecurityConfig {
 
-	@Bean
-	public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+    @Bean
+    SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
 		http
 			.authorizeExchange(exchanges -> exchanges
 			.pathMatchers("/api/**").authenticated()
@@ -24,8 +24,8 @@ public class SecurityConfig {
 		return http.build();
 	}
 
-	@Bean
-	public MapReactiveUserDetailsService userDetailsService() {
+    @Bean
+    MapReactiveUserDetailsService userDetailsService() {
 		UserDetails user = User.withDefaultPasswordEncoder()
 			.username("usuario")
 			.password("clave123")
